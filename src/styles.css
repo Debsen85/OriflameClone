@@ -1,0 +1,7 @@
+::-webkit-scrollbar {display:none;}
+@font-face { font-family: Formula2; src: url('./assets/Formula1-Regular.ttf'); } 
+body
+{
+    font-family: Formula2;
+    text-decoration: none;
+}

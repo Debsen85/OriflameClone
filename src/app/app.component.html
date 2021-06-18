@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Oriflame - Cosmetic Website</title>
+  </head>
+  <body>
+    <div id="d1">
+      <div id="d2">
+        <img src="./assets/Main.png" alt="Image" width="380px" height="120px">
+        <h3>{{ date | date}}</h3>
+      </div>
+      <nav class="navbar navbar-inverse" style="margin-top: 2%;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" [routerLink]="['/Home']">Oriflame</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a [routerLink]="['/Home']">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Information <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a [routerLink]="['/AboutUs']">About Us</a></li>
+                <li><a [routerLink]="['/ContactUs']">ContactUs</a></li>
+                <li><a [routerLink]="['/Services']">Services</a></li>
+              </ul>
+            </li>
+            <li><a [routerLink]="['/Products']">Products</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a [routerLink]="['/SignUp']"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a [routerLink]="['/SignIn']"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div style="width: 100%; background-color: antiquewhite;">
+        <router-outlet></router-outlet>
+      </div>
+      <div style="margin-top: 2%;">
+        <footer>
+          <div id="d3">
+            <h2>Thank you for visiting our website.</h2>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

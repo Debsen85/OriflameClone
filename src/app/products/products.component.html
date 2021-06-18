@@ -1,0 +1,103 @@
+<div style="width:100%; border: 3px solid grey; display: flex; border-radius: 10px;">
+    <div id="d1">
+        <div style="text-align: center;"><h2>Product Types</h2></div>        
+        <div class="Div1"><button class="But1" (click)="B1()">All Products</button></div>
+        <div class="Div1"><button class="But1" (click)="B2()">Female Products</button></div>
+        <div class="Div1"><button class="But1" (click)="B3()">Male Products</button></div>
+        <div class="Div1"><button class="But1" (click)="B4()">Baby Products</button></div>     
+        <div style="padding-top: 20px; text-align: center;">
+            <h4>Items in the Cart: {{Items}}</h4>
+            <h4>Total Cost: Rs. {{Cost}}</h4>
+            <input type="text" name="Name" id="Inp1" placeholder="Your Name"><br><br>
+            <input list="Position" name="Position" id="Inp2" placeholder="Your Position"><br><br>
+            <datalist id="Position">
+                <option value="Normal Customer">
+                <option value="VIP Customer">
+                <option value="Brand Partner">
+                <option value="Executives">
+                <option value="Owner">
+            </datalist>
+            <div class="Div1"><button class="But1" (click)="B5()">Check Out</button></div> 
+            <div *ngIf="Flag" style="width:100%; border: 0px; border-radius: 5px; background-color: beige; text-align: left;">
+                <p>Your Name: {{Name}}</p>
+                <p>Your Position: {{Position}}</p>
+                <p>Discount: {{Discount}} %</p>
+                <p>Total items bought: {{TI}}</p>
+                <p>Total cost: Rs. {{TC}}</p>
+            </div>
+        </div>           
+    </div>
+    <div id="d2">
+        <div style="text-align: center;"><h2>Product View</h2></div>
+        <div [ngSwitch]="Product">
+            <div *ngSwitchCase="'All'">
+                <div class="row">
+                    <div *ngFor="let card of cards1">   
+                        <div class="col-sm-4" style="text-align: center; padding: 20px;">                
+                            <div class="card" style="width:300px; padding-bottom: 15px; border: 2px solid black; border-radius: 5px; background-color: aquamarine;">
+                                <img class="card-img-top" src={{card.img}} alt="Card image" style="width:100%">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{card.title}}</h4>
+                                    <p class="card-text">{{card.description}}</p>
+                                    <p class="card-text">Rs. {{card.price}}</p>
+                                    <button (click)=Inc(card.price) class="btn btn-primary" style="outline: none;">{{card.buttonText1}}</button><label style="padding-left: 5px;padding-right: 5px;">Add or Delete</label><button (click)=Dec(card.price) class="btn btn-primary" style="outline: none;">{{card.buttonText2}}</button>     
+                                </div>                    
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="'Female Products'">
+                <div class="row">
+                    <div *ngFor="let card of cards2">   
+                        <div class="col-sm-4" style="text-align: center; padding: 20px;">                   
+                            <div class="card" style="width:300px; padding-bottom: 15px; border: 2px solid black; border-radius: 5px; background-color: aquamarine;">
+                                <img class="card-img-top" src={{card.img}} alt="Card image" style="width:100%">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{card.title}}</h4>
+                                    <p class="card-text">{{card.description}}</p>
+                                    <p class="card-text">Rs. {{card.price}}</p>
+                                    <button (click)=Inc(card.price) class="btn btn-primary" style="outline: none;">{{card.buttonText1}}</button><label style="padding-left: 5px;padding-right: 5px;">Add or Delete</label><button (click)=Dec(card.price) class="btn btn-primary" style="outline: none;">{{card.buttonText2}}</button>    
+                                </div>                    
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="'Male Products'">
+                <div class="row">
+                    <div *ngFor="let card of cards3">   
+                        <div class="col-sm-4" style="text-align: center; padding: 20px;">          
+                            <div class="card" style="width:300px; padding-bottom: 15px; border: 2px solid black; border-radius: 5px; background-color: aquamarine;">
+                                <img class="card-img-top" src={{card.img}} alt="Card image" style="width:100%">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{card.title}}</h4>
+                                    <p class="card-text">{{card.description}}</p>
+                                    <p class="card-text">Rs. {{card.price}}</p>
+                                    <button (click)=Inc(card.price) class="btn btn-primary" style="outline: none;">{{card.buttonText1}}</button><label style="padding-left: 5px;padding-right: 5px;">Add or Delete</label><button (click)=Dec(card.price) class="btn btn-primary" style="outline: none;">{{card.buttonText2}}</button>
+                                </div>                    
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="'Baby Products'">
+                <div class="row">
+                    <div *ngFor="let card of cards4">   
+                        <div class="col-sm-4" style="text-align: center; padding: 20px;">               
+                            <div class="card" style="width:300px; padding-bottom: 15px; border: 2px solid black; border-radius: 5px; background-color: aquamarine;">
+                                <img class="card-img-top" src={{card.img}} alt="Card image" style="width:100%">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{card.title}}</h4>
+                                    <p class="card-text">{{card.description}}</p>
+                                    <p class="card-text">Rs. {{card.price}}</p>
+                                    <button (click)=Inc(card.price) class="btn btn-primary" style="outline: none;">{{card.buttonText1}}</button><label style="padding-left: 5px;padding-right: 5px;">Add or Delete</label><button (click)=Dec(card.price) class="btn btn-primary" style="outline: none;">{{card.buttonText2}}</button>
+                                </div>                    
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

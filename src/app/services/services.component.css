@@ -1,0 +1,34 @@
+#d1
+{
+    width: 90%;
+    margin: auto;
+    border: 2px solid grey;
+    background-color: lightpink;
+}
+.Img
+{
+    border: 3px solid black;    
+}
+.d2
+{
+    width: 50%;
+}
+.B1
+{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: lightsalmon;
+}
+.B1:hover
+{
+    background-color: salmon;
+}
+.d3
+{
+    width: 24%;
+    background-color: palegoldenrod;
+    border: 0px;
+    border-radius: 10px;
+    margin-left: 0.75%;
+}

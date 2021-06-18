@@ -1,0 +1,34 @@
+#d1
+{
+    width: 20%;
+    background-color: lightblue;
+    border: 0px;
+    border-radius: 10px;
+    height: 880px;
+    position: sticky;
+    top: 0px;
+}
+#d2
+{
+    width: 80%;
+    background-color: lightskyblue;
+    border: 0px;
+    border-radius: 10px;
+}
+.But1
+{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    background-color: lightseagreen;
+}
+.But1:hover
+{
+    background-color: seagreen;
+}
+.Div1
+{
+    padding: 15px;
+}

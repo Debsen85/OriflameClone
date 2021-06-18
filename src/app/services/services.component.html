@@ -1,0 +1,83 @@
+<div style="width: 100%">
+    <div id="d1">
+        <div style="text-align: center; padding: 20px;"><h1>Business opportunity</h1></div> 
+        <div style="width: 100%; display: flex;"> 
+            <div class="d2" style="margin-left: 1%;">
+                <div><img src="../assets/B1.jpg" alt="Image" width="96%" height="300px" style="float: left;" class="Img"></div>
+                <div style="text-align: center;"><button class="B1" (click)=But1()>Become a brand partner</button></div>
+            </div>
+            <div class="d2" style="margin-right: 1%;">
+                <div><img src="../assets/B2.jpg" alt="Image" width="96%" height="300px" style="float: right;" class="Img"></div>
+                <div style="text-align: center;"><button class="B1" (click)=But2()>Become a VIP customer</button></div>
+            </div>
+        </div>  
+        <div style="text-align: center;">
+            <br>
+            <h4>You are currently: A {{Customer}}</h4>           
+        </div>
+        <hr style="background-color: black; height: 1px; border: none;">
+        <div style="text-align: center; padding: 10px;"><h1>Other Services</h1></div> 
+        <div style="width: 100%; display: flex; padding-bottom: 20px; text-align: center;">
+            <div class="d3">
+                <h4>Home Delivery Services</h4>
+                <h5>Enter: Your Position</h5><br>
+                <input list="Position" name="Position" id="Inp1">
+                <datalist id="Position">
+                    <option value="Normal Customer">
+                    <option value="VIP Customer">
+                    <option value="Brand Partner">
+                    <option value="Executives">
+                    <option value="Owner">
+                </datalist>
+                <div style="padding: 20px;"><button (click)=OP1()>Check Status</button><br></div>
+                <br>
+                <p>Status: {{HD}}</p><!--Interpolation-->
+            </div>
+            <div class="d3">
+                <h4>Take Away Services</h4>
+                <h5>Enter: Your Position</h5><br>
+                <input list="Position" name="Position" id="Inp2">
+                <datalist id="Position">
+                    <option value="Normal Customer">
+                    <option value="VIP Customer">
+                    <option value="Brand Partner">
+                    <option value="Executives">
+                    <option value="Owner">
+                </datalist>
+                <div style="padding: 20px;"><button (click)=OP2()>Check Status</button><br></div>
+                <br>
+                <p>Status: {{TA}}</p>
+            </div>
+            <div class="d3">
+                <h4>Special Offers Services</h4>
+                <h5>Enter: Your Position</h5><br>
+                <input list="Position" name="Position" id="Inp3">
+                <datalist id="Position">
+                    <option value="Normal Customer">
+                    <option value="VIP Customer">
+                    <option value="Brand Partner">
+                    <option value="Executives">
+                    <option value="Owner">
+                </datalist>
+                <div style="padding: 20px;"><button (click)=OP3()>Check Status</button><br></div>
+                <br>
+                <p>Status: {{SO}}</p>
+            </div>
+            <div class="d3">
+                <h4>Special Prizes Services</h4>
+                <h5>Enter: Your Position</h5><br>
+                <input list="Position" name="Position" id="Inp4">
+                <datalist id="Position">
+                    <option value="Normal Customer">
+                    <option value="VIP Customer">
+                    <option value="Brand Partner">
+                    <option value="Executives">
+                    <option value="Owner">
+                </datalist>
+                <div style="padding: 20px;"><button (click)=OP4()>Check Status</button><br></div>
+                <br>
+                <p>Status: {{SP}}</p>
+            </div>
+        </div>
+    </div> 
+</div>   
